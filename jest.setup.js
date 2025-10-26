@@ -32,4 +32,3 @@ Object.defineProperty(window, "chrome", {
   value: global.chrome,
   writable: true,
 });
-

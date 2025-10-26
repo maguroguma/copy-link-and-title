@@ -1,0 +1,22 @@
+[default]
+# デフォルト設定
+extend-ignore-re = [
+  # 日本語を含む行を無視
+  # ".*[\\p{Hiragana}\\p{Katakana}\\p{Han}].*",
+]
+
+[files]
+# チェック対象から除外するファイル
+extend-exclude = [
+  "node_modules",
+  "dist",
+  "coverage",
+  "*.log",
+  "*.lock",
+  "package-lock.json",
+]
+
+[default.extend-words]
+# 正しいと見なす単語（誤検知を防ぐ）
+# 例: "master" は通常 "main" への typo として検出されることがある
+# 必要に応じて追加
