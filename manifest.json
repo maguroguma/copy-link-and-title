@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Copy Link and Title",
+  "version": "1.0.0",
+  "description": "現在のWebページのタイトルとURLをMarkdown形式でクリップボードにコピーします",
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "contextMenus",
+    "notifications"
+  ],
+  "action": {
+    "default_title": "Copy Link and Title"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icons/icon.svg"
+  }
+}
